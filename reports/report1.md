@@ -23,4 +23,4 @@ Once the data was scrapped from the web and stores in lists in a Jupyter Noteboo
 Both the correlation and Spearman Correlation, .5 and .4 respectively, suggest that there is a notable correlation between a players' salaries and their PERs. 
 
 ### Jupyter Notebook:
-
+https://github.com/willythor/ThinkStats2/blob/master/code/report1.ipynb
