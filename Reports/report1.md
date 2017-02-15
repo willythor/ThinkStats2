@@ -15,7 +15,7 @@ To get an initial sense of how ACT scores and SAT scores compare, I first plotte
 
 ![ACT Scores by Region](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/pmf.png?raw=true)
 
-![ACT/SAT Score Ratios by Region](none)
+![ACT/SAT Score Ratios by Region](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/kde.png?raw=true)
 
 Next, we can combine the ACT scores between Midwestern and other colleges. The first thing that stands out is that schools in the Midwest appear to have ACT scores that have are on average higher. Midwestern schools seemed to be skewed to the right more than non-Midwestern schools. We cannot draw many conclusions from this graph. However, it does seem to suggest that Midwestern schools score higher on the ACT. It might be interesting to compare the ratio of ACT / SAT scores in the two regions.
 
