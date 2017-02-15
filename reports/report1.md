@@ -12,12 +12,15 @@ Once the data was scrapped from the web and stores in lists in a Jupyter Noteboo
 
 ### Results
 ![KDE of Salaries](salaries_kde.png)
+
 The KDE of salaries is noteable because it is long tailed. There are not a lot of players that get paid in the tens of millions, and this shows in the graph. The probability density of getting paid over 25 million dollars is nearly an order of magnitude less than the probably density of the average NBA salary in this data set (roughly 8 million dollars).
 
 ![KDE of PERs](PERs_kde.png)
+
 The KDE of PERs is only slightly long tailed in comparision to the KDE of salaries. This may suggest that the increase in salaries across players is inflated in comparision to PERs across players. 
 
 ![Scatter Plot of NBA Salaries and PERs](scatter_plot.png)
+
 The scatter plot of NBA salaries and PERs shows a slight correlation between the two variables.
 
 ### Interpretation
