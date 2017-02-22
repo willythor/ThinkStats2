@@ -2,7 +2,7 @@
 ### by David Papp
 
 #####1) What is the primary motivating question of this report?
-The motivating question is whether money buys happiness. 
+The motivating question is whether money buys happiness. It is unclear whether the article is looking for correlation or causation but this is fine in the introduction.
 
 #####2) What dataset(s) does it use?  What person or agency produced the data?
 The report relies on data from the General Social Survey. The report does not mention who produced this data.
