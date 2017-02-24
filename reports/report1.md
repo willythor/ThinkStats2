@@ -1,10 +1,10 @@
 # Higher paid NBA players are (probably) deserving 
 
-NBA players are paid millions of dollars a year to play sports and on top of income from shoe deals, TV advertisements, and any other endoresments. I'm not here to make an arguemnt against an NBA player's salary. I do however wonder if there lies a correlation between how much an NBA player is paid and how well he performs on the court. Using data from ESPN and hoopshype.com, I looked into whether there existed some kind of correlation between an NBA player's salary and his quantitative performance.
+NBA players are paid millions of dollars a year in addition to income from shoe deals, TV advertisements, and any other endoresments. I'm not here to make an arguemnt against an NBA player's salary. I do however wonder if there lies a correlation between how much an NBA player is paid and how well he performs on the court. Using data from ESPN and hoopshype.com, I looked into whether there existed some kind of correlation between an NBA player's salary and his quantitative performance.
 
 ### Methodology
 
-First I thought about the best way to measure the impact of an NBA player. I came across player effiency rating (PER). PER relies on a detailed formula that takes into account just about every major basketball statisic and spits out a number that attempts to encapsulates a player's overall contributions. Seeing as PER was calculated in such a way that I could compare starters and bench players, I decided to use it to compare players' performances and salaries.
+First I thought about the best way to measure the impact of an NBA player. I came across player effiency rating (PER). PER relies on a detailed formula that takes into account just about every major basketball statisic and spits out a number that attempts to encapsulates a player's overall contributions to a hypothetical, average NBA team. Seeing as PER was calculated in such a way that I could compare starters and bench players, I decided to use it to compare players' performances and salaries.
 
 After deciding on an NBA statistic to use I began scrapping the web for data. I found salaries for the 411 highest paid NBA players on hoopshype.com. And I found PER stats for the top 342 players in the league on ESPN.com. 
 
@@ -25,7 +25,9 @@ The scatter plot of NBA salaries and PERs shows a slight correlation between the
 
 ### Interpretation
 
-Both the correlation and Spearman Correlation, .5 and .4 respectively, suggest that there is a slight correlation between a player salaries and PERs. This result is by no means conclusive since the PER statistic is not bulletproof. It's hard to compare players who playe a couple minutes a game against players who play entire games, but this is something PER attempts to do here. More conclusive results could be garnered by comparing players who play similar minutes.
+Both the correlation and Spearman Correlation, .5 and .4 respectively, suggest that there is a slight correlation between a player salaries and PERs. The fact that the Spearman Correlation is slightly higher suggests the possibility that there may be a nonlinear relationship between the two variables, however this isn't backed up qualitatively by looking at the scatter plot of the two variables.
+
+This result is by no means conclusive since the PER statistic is not bulletproof. It's hard to compare players who playe a couple minutes a game against players who play entire games, but this is something PER attempts to do here. More conclusive results could be garnered by comparing players who play similar minutes.
 
 ### Jupyter Notebook:
 https://github.com/willythor/ThinkStats2/blob/master/code/report1.ipynb
