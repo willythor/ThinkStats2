@@ -21,7 +21,7 @@ Next, we can compare the ACT scores between Midwestern and other colleges. The f
 
 ![ACT Scores by Region](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/act_scores_by_region.png?raw=true)
 
-It might be interesting to compare the ratio of ACT / SAT scores in the two regions. 
+It might also be interesting as well as more intuitive to compare the ratio of ACT / SAT scores in the two regions. 
 
 ![ACT/SAT Score Ratios by Region](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/actsatratio.png?raw=true)
 
