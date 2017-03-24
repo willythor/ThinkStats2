@@ -1,4 +1,4 @@
-#The Association Between Drug Usage and Depression
+# The Association Between Drug Usage and Depression
 ### by David Papp and Willem Thorbecke
 
 Corresponding jupyter notebook:
