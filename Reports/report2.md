@@ -1,8 +1,7 @@
 # The Association Between Drug Usage and Depression
 ### by David Papp and Willem Thorbecke
 
-Corresponding jupyter notebook:
-
+Corresponding jupyter notebook: https://github.com/davpapp/ThinkStats2/blob/master/code/Report%202.ipynb
 
 #### Introduction
 The goal of this article is to explore the association between drug usage and depression. Intutively, many would argue that those who use drugs are more likely to be depressed. To explore this relationship, we took data from the National Drug Usage and Health Survey from 2014. 
