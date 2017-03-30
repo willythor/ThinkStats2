@@ -11,7 +11,7 @@ To answer our question, we used logistical regression. Our dependent variable wa
 
 First, to visualize the effect of at least one variable, we plotted the age at which respondents first drank alcohol versus whether they've been diagnosed with depression. 
 
-![Plot](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/src.png?raw=true)
+![Plot](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/scr.png?raw=true)
 
 This doesn't tell us a whole lot visually, so we need to do some regression.
 
