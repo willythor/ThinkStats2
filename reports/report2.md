@@ -20,12 +20,13 @@ First, we tested for correlation between depression and typical demographic vari
 ![Demographics](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/demo.png?raw=true)
 
 The variables in the chart above have the following relations (if the variable dictates a yes or no question, then (0==yes,1==no): 
-⋅⋅⋅c_white == respondants race is white
-⋅⋅⋅c_black == respondants race is black
-⋅⋅⋅c_hispanic == respondants race is hispance
-⋅⋅⋅INCOME == respondants income bracket
-⋅⋅⋅CATAG7 == respondants age bracket 
-⋅⋅⋅IRSEX == respondants sex (0==male, 1==female)
+
+   c_white == respondants race is white
+   c_black == respondants race is black
+   c_hispanic == respondants race is hispance
+   INCOME == respondants income bracket
+   CATAG7 == respondants age bracket 
+   IRSEX == respondants sex (0==male, 1==female)
 
 Analyzing each of the coefficients: 
 - Race: We recoded race into binary dummy variables in order to be able to sensibly include them in our regression (otherwise, they would have been on a scale of 1-7). Surprisingly, being white is positively correlated with having been diagnosed with depression, whereas being black and Hispanic are negatively correlated. 
