@@ -19,7 +19,7 @@ First, we tested for correlation between depression and typical demographic vari
 
 ![Demographics](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/demo.png?raw=true)
 
-The variables in the chart above have the following relations (if the variable dictates a yes or no question, then (0==yes,1==no): 
+The variables in the chart above have the following relations (if the variable dictates a yes or no question, then 0==yes,1==no): 
 
    - c_white == respondants race is white
    - c_black == respondants race is black
