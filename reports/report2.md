@@ -20,12 +20,12 @@ First, we tested for correlation between depression and typical demographic vari
 ![Demographics](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/demo.png?raw=true)
 
 The variables in the chart above have the following relations (if the variable dictates a yes or no question, then (0==yes,1==no): 
-  c_white == respondants race is white
-  c_black == respondants race is black
-  c_hispanic == respondants race is hispance
-  INCOME == respondants income bracket
-  CATAG7 == respondants age bracket 
-  IRSEX == respondants sex (0==male, 1==female)
+...c_white == respondants race is white
+...c_black == respondants race is black
+...c_hispanic == respondants race is hispance
+...INCOME == respondants income bracket
+...CATAG7 == respondants age bracket 
+...IRSEX == respondants sex (0==male, 1==female)
 
 Analyzing each of the coefficients: 
 - Race: We recoded race into binary dummy variables in order to be able to sensibly include them in our regression (otherwise, they would have been on a scale of 1-7). Surprisingly, being white is positively correlated with having been diagnosed with depression, whereas being black and Hispanic are negatively correlated. 
@@ -38,14 +38,14 @@ Next, we used data mining to find the variables included in the study that are m
 ![Health](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/health.png?raw=true)
 
 The variables in the chart above have the following relations (0==no,1==yes):
-  LIFANXD == has been diagnosed with anxiety by a doctor
-  LIFULCER == has had an ulcer
-  LIFPANCR == has had pancreatitis
-  LIFTINN == has had tinnitus
-  LIFSTDS == has had an STD
-  LIFCIRR == has had cirrhosis
-  LIFSINUS == has had sinusitis
-  LIFHIV == has had HIV 
+  ...LIFANXD == has been diagnosed with anxiety by a doctor
+  ...LIFULCER == has had an ulcer
+  ...LIFPANCR == has had pancreatitis
+  ...LIFTINN == has had tinnitus
+  ...LIFSTDS == has had an STD
+  ...LIFCIRR == has had cirrhosis
+  ...LIFSINUS == has had sinusitis
+  ...LIFHIV == has had HIV 
 
 When we ran the regression, we underestimated the scope of the data we're dealing with. We did not expect these variables to relate to health conditions or diseases as opposed to drug usage. However, we realized that even if we are not interested in these variables, they provide a relative metric for effect size. 
 
@@ -57,10 +57,10 @@ Next, we did a regression with four of the more common street drugs. At first, w
 ![Drug Usage](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/drugs.png?raw=true)
 
 The variables in the chart above have the following relations (0==no,1==yes):
-  MJEVER == has ever tried marijuana 
-  COCEVER == has ever tried cocaine 
-  ALCEVER == has ever tried alcohol
-  HEREVER == has ever tried heroin
+  ...MJEVER == has ever tried marijuana 
+  ...COCEVER == has ever tried cocaine 
+  ...ALCEVER == has ever tried alcohol
+  ...HEREVER == has ever tried heroin
 
 Again, the results go against our intuition that drug usage is correlated with depression. Cocaine is the only drug that is positively associated with being diagnosed with depression. It'll be interesting to see how including the demographic variables changes this because it could be that the drug usage variables are absorbing the effect of some demographic variable. The pseudo R^2 value is once again very low.
 
