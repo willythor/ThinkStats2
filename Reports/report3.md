@@ -1,4 +1,4 @@
-#NBA Shot Distribution
+# NBA Shot Distribution
 ### by Willem Thorbecke and David Papp
 
 https://github.com/davpapp/ThinkStats2/blob/master/code/report3nba.ipynb
