@@ -1,11 +1,3 @@
-) See Lecture 16 to see whose Report 2 you are reviewing.  Locate the report and read it.
-
-2) In your ThinkStats2 repo, you should have a directory named reports.  In that directory, create a document called report2review.md.  Write your comments in this document (details below)
-
-3) Meet with the author of the report you read to go over your comments.  Revise your comments based on the conversation.
-
-4) Submit a link to your review.
-
 1) What is the primary motivating question of this report?
 
 What percentage of alcohol abusers and those dependent on alcohol get treatment, and for those that do, what age do they tend to get treatment at?
