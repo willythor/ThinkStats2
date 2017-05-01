@@ -1,10 +1,12 @@
 # Finding NBA Players with Similar Styles
 ## by Willem Thorbecke and David Papp
 
-[Jupyter Notebook]
+[Jupyter Notebook](https://github.com/davpapp/ThinkStats2/blob/master/code/report3nba.ipynb)
 
 ### Introduction
-Like most sports in the US, the NBA is obsessed with numerical data. It closely tracks over thirty statistics for each player. Such a large amount of data has great potential for analysis on both an individual and team level. Players in the NBA are often compared to others, both active and retired, based on similar play styles. For example, it is common to hear statements such as “Russell Westbrook is the new Derrick Rose”. The purpose of our project is to apply machine learning in the form of clustering to see which players are actually similar based on 22 variables. 
+Like most sports in the US, the NBA is obsessed with numerical data. It closely tracks over thirty statistics for each player. Such a large amount of data has great potential for analysis. Players in the NBA are often compared to others, both active and retired, based on similar play styles. For example, it is common to hear statements such as “Russell Westbrook is the new Derrick Rose”. The purpose of our project is to apply machine learning in the form of clustering to see which players are actually similar based on 22 variables. 
+
+We successfully generated clusters of players that are very similar quantitatively. It is up to the reader to decide whether this is qualitatively true.
 
 ### NBA Data
 We used a third-party API to download official data from the NBA. The API fetched relevant information from the NBA's website, including players’ shot distributions, positions, field goal averages, and more. 
@@ -40,7 +42,7 @@ For simplicities sake we decided to plot and cluster a graph of the first two co
 
 In order to qualitatively assess the validity of this model we selected players from each of this clusters who on average played more than 25 mins per game this season.
 
-Interestingly filtering like this eradicated an entire cluster. This left us with three clusters major clusters to parse through, due to the nature of the clustering seen above, our model lends itself to including outliers in each of the clusters. 
+Interestingly, filtering like this eradicated an entire cluster. This left us with three clusters major clusters to parse through, due to the nature of the clustering seen above, our model lends itself to including outliers in each of the clusters. 
 
 Our model was able to identify a cluster of power forwards/centers with 80 percent accuracy. Two of the clusters are shown below as examples, with outliers shown in bold:
 
@@ -51,13 +53,16 @@ Current categories for NBA positions include:
 - PF = power forward
 - C = center 
 
+Generally speaking a point guard is the smallest player on the floor and a center is the largest, and all the players in between have on average, heights in ascending order (based on the listing above). With that being said, the skillsets of the various positions often overlaps with the position above or below it on this list above. As is the case with most data and categories, there are outliers such as centers who have very similar playing styles to guards.
+
+The two most prominent clusters of NBA players playing more than 25 minutes are listed below. Qualitatively and quantitatively one can access that the playing style of most of the players listed below is very similar. This can be roughly verified by looking at the similarity in positions with outliers being listed in bold. 
 
 Cluster 1:
 - Steven Adams (Center/PF)
 - LaMarcus Aldridge (Center/PF) 
 - Willie Cauley-Stein (Center/PF)
 - Boris Diaw (Center/PF)
-- Goran Dragic (PG)
+- __Goran Dragic (PG)__
 - Marcus Georges-Hunt (SG/SF)
 - Taj Gibson (Center/PF)
 - Aaron Gordon (Center/PF)
@@ -96,7 +101,7 @@ Cluster 2:
 
 
 
-It is now up to the reader’s discretion to decide whether these players exhibit similar play styles. We certainly think so. Over 80% of players in each cluster play the same position, which is strongly indicative of play style. 
+It is now up to the reader’s discretion to decide whether these players exhibit similar play styles. We certainly think so. Over 80% of players in each cluster play either the same position or are separated by a single position (e.g., a point guard and a shooting guard are a single position apart), which is strongly indicative of play style. 
 
 
 
