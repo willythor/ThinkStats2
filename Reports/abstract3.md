@@ -1,7 +1,5 @@
-# NBA Shot Distribution
-#### By Willem Thorbecke and David Papp
+## Finding NBA Players with Similar Styles
 
-Full article link: https://github.com/davpapp/ThinkStats2/blob/master/Reports/report3.md
+Willem Thorbecke and David Papp
 
-
-Despite playing specific positions and zones, NBA players take shots from all over the court. The location of the shot is important in determining the efficiency of the shot and the chance of being blocked. We took data from the 2016-2017 NBA year from Stephen Curry and used clustering to divide his shots into clusters based on region. Our goal was to see which clustering algorithm produces clusters most consistent with NBA positions.
+Players in the NBA are often compared to others, both active and retired, based on similar play styles. For example, it is common to hear statements such as “Russell Westbrook is the new Derrick Rose”. The purpose of our project is to apply machine learning in the form of clustering to see which players are actually similar based on 22 variables. We successfully generated clusters of players that are very similar quantitatively, based on their statistics. It is up to the reader to decide whether this is qualitatively true. [Report](https://github.com/davpapp/ThinkStats2/blob/master/Reports/report3.md)
