@@ -1,30 +1,103 @@
-# NBA Shot Distribution
-### by Willem Thorbecke and David Papp
+# Finding NBA Players with Similar Styles
+## by Willem Thorbecke and David Papp
 
-https://github.com/davpapp/ThinkStats2/blob/master/code/report3nba.ipynb
+[Jupyter Notebook]
+
+### Introduction
+Like most sports in the US, the NBA is obsessed with numerical data. It closely tracks over thirty statistics for each player. Such a large amount of data has great potential for analysis on both an individual and team level. Players in the NBA are often compared to others, both active and retired, based on similar play styles. For example, it is common to hear statements such as “Russell Westbrook is the new Derrick Rose”. The purpose of our project is to apply machine learning in the form of clustering to see which players are actually similar based on 22 variables. 
+
+### NBA Data
+We used a third-party API to download official data from the NBA. The API fetched relevant information from the NBA's website, including players’ shot distributions, positions, field goal averages, and more. 
+
+### Analysis
+Our goal was to create a cluster model from which we can group play styles. In our first model, we aimed for simplicity and thus narrowed our parameters to just shot positioning. Since shot positioning is likely good indicator of a player’s position, we were curious to see if we could accurately cluster and predict a player’s position based on his the locations of his shots.
+
+In order to allow us to use Sklearn cluster models, we had to represent each player as a singular point. To do this, we found each player’s average shot location on the court. It’s worth noting that a more advanced approach would have been to take a different machine learning approach where each player was represented as a distribution.
+
+The Cartesian and polar plots are shown below. The Cartesian one is easier to interpret.
+![Cartesian](Images/cartesian.png)
+![Polar](Images/polar.png)
+
+We studied Sklearn’s available clustering algorithms and chose Affinity Propagation based on our expected results. This type of clustering is the most sensitive to “exemplars”, which are members of the input set that are representative of clusters [Affinity Propagation](https://en.wikipedia.org/wiki/Affinity_propagation). This model seemed to be well aligned with basketball positions and did not require us to specify the number of clusters.
+![Clustering Models](Images/clustering_algorithms.png)
+
+When fitted to players’ average shot positions, the following results were obtained:
+![Clusters](Images/clustered_shot_plot.png)
+![Positions](Images/positions.gif)
+
+A few things stand out from this. Affinity Propagation clustering produced 5 distinct clusters (despite not requiring the number of clusters as an input parameter). This supports the validity of the clustering model, since there are 5 positions in basketball. Furthermore, the clusters are more or less aligned with the typical positions.
+
+Using this model, we can now obtain a prediction for a player’s position. For example, to predict Dwight Howard’s position, we can add him to the cluster model. With an average shot position of (-0.63, 16.49), our model predicts him to be a center, which is accurate. 
 
 
-#### Introduction
-Despite playing specific positions and zones, NBA players take shots from all over the court. The location of the shot is important in determining the efficiency of the shot and the chance of being blocked. We took data from the 2016-2017 NBA year from Stephen Curry and used clustering to divide his shots into clusters based on region. Our goal was to see which clustering algorithm produces clusters most consistent with NBA positions.
+Next, we attempted to cluster players based on a dozen or so basic NBA stats such as field goal percentage and minutes played per game and rebounds per game. The purpose of this was to identify which players had similar play styles. This process was completed by way of multivariate analysis followed by a simple clustering model. The process of multivariate analysis involved loading the list of stats for each player in the NBA and then normalizing them so that we could find the principal components of the dataset. Graphing the variance of the components reveals that the weight of the first few components significantly outweighs the rest. This greatly reduces the computational complexity of the clustering algorithm.
 
-#### Methodology
-We used a third-party API to download official data from the NBA. The API fetched relevant information from the NBA's website, including the IDs of players and the location of their shots. We chose to study perhaps the most famous shooter, Stephen Curry. First, we plotted the location of his shots to get a sense of our raw data.
+![Variance](Images/variance.png)
 
-![Curry Shots](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/curry_shots.png?raw=true)
+For simplicities sake we decided to plot and cluster a graph of the first two components using a k-means algorithm.
 
-Applying a K-means cluster model with a varied number of clusters, we obtained reasonable clusters. 
+![Multivariate Cluster](Images/multivariate_cluster.png)
 
-![K-means ward](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/kmeansward.png?raw=true)
+In order to qualitatively assess the validity of this model we selected players from each of this clusters who on average played more than 25 mins per game this season.
 
-Using only 4 clusters with no connectivity, when linkage was set to ward, the plot started to resemble typical NBA positions.
+Interestingly filtering like this eradicated an entire cluster. This left us with three clusters major clusters to parse through, due to the nature of the clustering seen above, our model lends itself to including outliers in each of the clusters. 
 
-Finally, with 5 clusters, connectivity, and ward linkage, we got the most consistent plot. 
+Our model was able to identify a cluster of power forwards/centers with 80 percent accuracy. Two of the clusters are shown below as examples, with outliers shown in bold:
 
-![5 cluster ward](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/5clusterward.png?raw=true)
+Current categories for NBA positions include: 
+- PG = point guard
+- SG = shooting guard
+- SF = small forward
+- PF = power forward
+- C = center 
 
-We also created a side-by-side visualization tool to help us choose the most fitting model. This tool could be generalized for other purposes.
 
-![Visualization](https://github.com/davpapp/ThinkStats2/blob/master/Reports/Images/visualization.png?raw=true)
+Cluster 1:
+- Steven Adams (Center/PF)
+- LaMarcus Aldridge (Center/PF) 
+- Willie Cauley-Stein (Center/PF)
+- Boris Diaw (Center/PF)
+- Goran Dragic (PG)
+- Marcus Georges-Hunt (SG/SF)
+- Taj Gibson (Center/PF)
+- Aaron Gordon (Center/PF)
+- Draymond Green (Center/PF)
+- __Tim Hardaway Jr. (Guard)__
+- Al Horford (Center/PF)
+- __Tyler Johnson (Guard)__
+- __Tyus Jones (Point Guard)__
+- Enes Kanter (Center/PF)
+- Kevon Looney (Center/PF)
+- Nikola Pekovic (Center/PF)
+ 
+Cluster 2:
+- Arron Afflalo (SG)
+- Tony Allen (SG)
+- Al-Farouq Aminu (SG/SF)
+- Ryan Anderson (SF)
+- Trevor Ariza (SG/SF)
+- Kent Bazemore (SG)
+- Patrick Beverley (PG/SG)
+- Bojan Bogdanovic (SF)
+- __Chris Bosh (PF)__
+- Corey Brewer (SG)
+- Jose Calderon (PG)
+- __Clint Capela (PF)__
+- __Tyson Chandler (Center)__
+- Ian Clark (PG/SG)
+- Norris Cole (PG/SG)
+- __DeMarcus Cousins (Center)__
+- __Robert Covington (Forward)__
+- Allen Crabbe (SG)
+- Jordan Crawford (SG, PG)
+- __Dante Cunningham (Forward)__
+- Malcolm Delaney (SG)
+- Matthew Dellavedova (PG)
 
-#### Analysis
-Although splitting one player's shots into clusters by position provides relatively little value, there is much to learn from the process. Using the same cluster algorithm, if we have information regarding the accuracy of each zone from which shots are taken, we could estimate the likelihood of making future shots. Similarly, if we know the location of defenders, we could calculate how a defender affects Curry's shot. Furthermore, using our visualization tool for different clustering algorithms, we could easily find the appropriate the model for different purposes.
+
+
+It is now up to the reader’s discretion to decide whether these players exhibit similar play styles. We certainly think so. Over 80% of players in each cluster play the same position, which is strongly indicative of play style. 
+
+
+
+
