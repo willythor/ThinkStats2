@@ -1,6 +1,8 @@
 # Finding NBA Players with Similar Styles
 ## by Willem Thorbecke and David Papp
 
+[Jupyter Notebook]
+
 ### Introduction
 Like most sports in the US, the NBA is obsessed with numerical data. It closely tracks over thirty statistics for each player. Such a large amount of data has great potential for analysis on both an individual and team level. Players in the NBA are often compared to others, both active and retired, based on similar play styles. For example, it is common to hear statements such as “Russell Westbrook is the new Derrick Rose”. The purpose of our project is to apply machine learning in the form of clustering to see which players are actually similar based on 22 variables. 
 
@@ -30,41 +32,70 @@ Using this model, we can now obtain a prediction for a player’s position. For 
 
 Next, we attempted to cluster players based on a dozen or so basic NBA stats such as field goal percentage and minutes played per game and rebounds per game. The purpose of this was to identify which players had similar play styles. This process was completed by way of multivariate analysis followed by a simple clustering model. The process of multivariate analysis involved loading the list of stats for each player in the NBA and then normalizing them so that we could find the principal components of the dataset. Graphing the variance of the components reveals that the weight of the first few components significantly outweighs the rest. This greatly reduces the computational complexity of the clustering algorithm.
 
+![Variance](Images/variance.png)
+
 For simplicities sake we decided to plot and cluster a graph of the first two components using a k-means algorithm.
 
-
+![Multivariate Cluster](Images/multivariate_cluster.png)
 
 In order to qualitatively assess the validity of this model we selected players from each of this clusters who on average played more than 25 mins per game this season.
 
 Interestingly filtering like this eradicated an entire cluster. This left us with three clusters major clusters to parse through, due to the nature of the clustering seen above, our model lends itself to including outliers in each of the clusters. 
 
-With that being said, out model was able to identify a cluster of power forwards/centers with 80 percent accuracy:
+Our model was able to identify a cluster of power forwards/centers with 80 percent accuracy. Two of the clusters are shown below as examples:
 
-Cluster 3:
-['0    Steven Adams\nName: PLAYER_NAME, dtype: object',
- Al Horford\nName: PLAYER_NAME, dtype: object',
- '0    Willie Cauley-Stein\nName: PLAYER_NAME, dtype: object',
- '0    Boris Diaw\nName: PLAYER_NAME, dtype: object',
- '0    Goran Dragic\nName: PLAYER_NAME, dtype: object',
- '0    Patricio Garino\nName: PLAYER_NAME, dtype: object',
- '0    Marcus Georges-Hunt\nName: PLAYER_NAME, dtype: object',
- '0    Taj Gibson\nName: PLAYER_NAME, dtype: object',
- '0    Aaron Gordon\nName: PLAYER_NAME, dtype: object',
- '0    Draymond Green\nName: PLAYER_NAME, dtype: object',
- '0    Tim Hardaway Jr.\nName: PLAYER_NAME, dtype: object',
- '0    Al Horford\nName: PLAYER_NAME, dtype: object',
- '0    Tyus Jones\nName: PLAYER_NAME, dtype: object',
+Current categories for NBA positions include: 
+PG = point guard
+SG = shooting guard
+SF = small forward
+PF = power forward
+C = center 
+Often times the playing style 
 
- '0    Enes Kanter\nName: PLAYER_NAME, dtype: object',
- '0    Kevon Looney\nName: PLAYER_NAME, dtype: object',
- '0    Nikola Pekovic\nName: PLAYER_NAME, dtype: object',
- '0    Ronnie Price\nName: PLAYER_NAME, dtype: object',
- '0    Jason Terry\nName: PLAYER_NAME, dtype: object',
- '0    Evan Turner\nName: PLAYER_NAME, dtype: object',
- '0    Fred VanVleet\nName: PLAYER_NAME, dtype: object',
- '0    Briante Weber\nName: PLAYER_NAME, dtype: object',
- '0    Delon Wright\nName: PLAYER_NAME, dtype: object']
+
+Cluster 1:
+Steven Adams (Center/PF)
+LaMarcus Aldridge (Center/PF) 
+Willie Cauley-Stein (Center/PF)
+Boris Diaw (Center/PF)
+Goran Dragic (PG)
+Marcus Georges-Hunt (SG/SF)
+Taj Gibson (Center/PF)
+Aaron Gordon (Center/PF)
+Draymond Green (Center/PF)
+__Tim Hardaway Jr. (Guard)__
+Al Horford (Center/PF)
+__Tyler Johnson (Guard)__
+__Tyus Jones (Point Guard)__
+Enes Kanter (Center/PF)
+Kevon Looney (Center/PF)
+Nikola Pekovic (Center/PF)
  
+Cluster 2:
+Arron Afflalo (SG)
+Tony Allen (SG)
+Al-Farouq Aminu (SG/SF)
+Ryan Anderson (SF)
+Trevor Ariza (SG/SF)
+Kent Bazemore (SG)
+Patrick Beverley (PG/SG)
+Bojan Bogdanovic (SF)
+__Chris Bosh (PF)__
+Corey Brewer (SG)
+Jose Calderon (PG)
+__Clint Capela (PF)__
+__Tyson Chandler (Center)__
+Ian Clark (PG/SG)
+Norris Cole (PG/SG)
+__DeMarcus Cousins (Center)__
+__Robert Covington (Forward)__
+Allen Crabbe (SG)
+Jordan Crawford (SG, PG)
+__Dante Cunningham (Forward)__
+Malcolm Delaney (SG)
+Matthew Dellavedova (PG)
+
+
 
 It is now up to the reader’s discretion to decide whether these players exhibit similar play styles. We certainly think so. Over 80% of players in each cluster play the same position, which is strongly indicative of play style. 
 
