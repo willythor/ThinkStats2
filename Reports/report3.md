@@ -54,46 +54,46 @@ Often times the playing style
 
 
 Cluster 1:
-Steven Adams (Center/PF)
-LaMarcus Aldridge (Center/PF) 
-Willie Cauley-Stein (Center/PF)
-Boris Diaw (Center/PF)
-Goran Dragic (PG)
-Marcus Georges-Hunt (SG/SF)
-Taj Gibson (Center/PF)
-Aaron Gordon (Center/PF)
-Draymond Green (Center/PF)
-__Tim Hardaway Jr. (Guard)__
-Al Horford (Center/PF)
-__Tyler Johnson (Guard)__
-__Tyus Jones (Point Guard)__
-Enes Kanter (Center/PF)
-Kevon Looney (Center/PF)
-Nikola Pekovic (Center/PF)
+- Steven Adams (Center/PF)
+- LaMarcus Aldridge (Center/PF) 
+- Willie Cauley-Stein (Center/PF)
+- Boris Diaw (Center/PF)
+- Goran Dragic (PG)
+- Marcus Georges-Hunt (SG/SF)
+- Taj Gibson (Center/PF)
+- Aaron Gordon (Center/PF)
+- Draymond Green (Center/PF)
+- __Tim Hardaway Jr. (Guard)__
+- Al Horford (Center/PF)
+- __Tyler Johnson (Guard)__
+- __Tyus Jones (Point Guard)__
+- Enes Kanter (Center/PF)
+- Kevon Looney (Center/PF)
+- Nikola Pekovic (Center/PF)
  
 Cluster 2:
-Arron Afflalo (SG)
-Tony Allen (SG)
-Al-Farouq Aminu (SG/SF)
-Ryan Anderson (SF)
-Trevor Ariza (SG/SF)
-Kent Bazemore (SG)
-Patrick Beverley (PG/SG)
-Bojan Bogdanovic (SF)
-__Chris Bosh (PF)__
-Corey Brewer (SG)
-Jose Calderon (PG)
-__Clint Capela (PF)__
-__Tyson Chandler (Center)__
-Ian Clark (PG/SG)
-Norris Cole (PG/SG)
-__DeMarcus Cousins (Center)__
-__Robert Covington (Forward)__
-Allen Crabbe (SG)
-Jordan Crawford (SG, PG)
-__Dante Cunningham (Forward)__
-Malcolm Delaney (SG)
-Matthew Dellavedova (PG)
+- Arron Afflalo (SG)
+- Tony Allen (SG)
+- Al-Farouq Aminu (SG/SF)
+- Ryan Anderson (SF)
+- Trevor Ariza (SG/SF)
+- Kent Bazemore (SG)
+- Patrick Beverley (PG/SG)
+- Bojan Bogdanovic (SF)
+- __Chris Bosh (PF)__
+- Corey Brewer (SG)
+- Jose Calderon (PG)
+- __Clint Capela (PF)__
+- __Tyson Chandler (Center)__
+- Ian Clark (PG/SG)
+- Norris Cole (PG/SG)
+- __DeMarcus Cousins (Center)__
+- __Robert Covington (Forward)__
+- Allen Crabbe (SG)
+- Jordan Crawford (SG, PG)
+- __Dante Cunningham (Forward)__
+- Malcolm Delaney (SG)
+- Matthew Dellavedova (PG)
 
 
 
