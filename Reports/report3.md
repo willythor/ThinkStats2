@@ -42,7 +42,7 @@ In order to qualitatively assess the validity of this model we selected players 
 
 Interestingly filtering like this eradicated an entire cluster. This left us with three clusters major clusters to parse through, due to the nature of the clustering seen above, our model lends itself to including outliers in each of the clusters. 
 
-Our model was able to identify a cluster of power forwards/centers with 80 percent accuracy. Two of the clusters are shown below as examples:
+Our model was able to identify a cluster of power forwards/centers with 80 percent accuracy. Two of the clusters are shown below as examples, with outliers shown in bold:
 
 Current categories for NBA positions include: 
 PG = point guard
@@ -50,7 +50,6 @@ SG = shooting guard
 SF = small forward
 PF = power forward
 C = center 
-Often times the playing style 
 
 
 Cluster 1:
