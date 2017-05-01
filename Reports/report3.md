@@ -45,11 +45,11 @@ Interestingly filtering like this eradicated an entire cluster. This left us wit
 Our model was able to identify a cluster of power forwards/centers with 80 percent accuracy. Two of the clusters are shown below as examples, with outliers shown in bold:
 
 Current categories for NBA positions include: 
-PG = point guard
-SG = shooting guard
-SF = small forward
-PF = power forward
-C = center 
+- PG = point guard
+- SG = shooting guard
+- SF = small forward
+- PF = power forward
+- C = center 
 
 
 Cluster 1:
