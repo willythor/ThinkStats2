@@ -16,12 +16,12 @@ The Cartesian and polar plots are shown below. The Cartesian one is easier to in
 ![Cartesian](Images/cartesian.png)
 ![Polar](Images/polar.png)
 
-We studied Sklearn’s available clustering algorithms and chose Affinity Propagation based on our expected results. This type of clustering is the most sensitive to “exemplars”, which are members of the input set that are representative of clusters ![Wikipedia](https://en.wikipedia.org/wiki/Affinity_propagation). This model seemed to be well aligned with basketball positions and did not require us to specify the number of clusters.
-
-
-
+We studied Sklearn’s available clustering algorithms and chose Affinity Propagation based on our expected results. This type of clustering is the most sensitive to “exemplars”, which are members of the input set that are representative of clusters [Affinity Propagation](https://en.wikipedia.org/wiki/Affinity_propagation). This model seemed to be well aligned with basketball positions and did not require us to specify the number of clusters.
+![Clustering Models](Images/clustering_algorithms.png)
 
 When fitted to players’ average shot positions, the following results were obtained:
+![Clusters](Images/clustered_shot_plot.png)
+![Positions](Images/positions.gif)
 
 A few things stand out from this. Affinity Propagation clustering produced 5 distinct clusters (despite not requiring the number of clusters as an input parameter). This supports the validity of the clustering model, since there are 5 positions in basketball. Furthermore, the clusters are more or less aligned with the typical positions.
 
