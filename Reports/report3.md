@@ -1,4 +1,4 @@
-# NBA Player Similarities
+# Finding NBA Players with Similar Styles
 ## by Willem Thorbecke and David Papp
 
 ### Introduction
